@@ -32,9 +32,5 @@ MathGame es una aplicación educativa diseñada para estudiantes de secundaria q
 
 Las contribuciones son bienvenidas. Puedes sugerir mejoras, reportar errores o añadir nuevas funcionalidades mediante pull requests.
 
-## Licencia
-
-Este proyecto está bajo licencia MIT
-
 ```
 ```
