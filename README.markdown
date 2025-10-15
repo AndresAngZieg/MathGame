@@ -33,3 +33,6 @@ Las contribuciones son bienvenidas. Puedes sugerir mejoras, reportar errores o a
 
 ```
 ```
+
+
+## Atribuciones
