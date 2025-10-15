@@ -1,59 +1,52 @@
-﻿<Window x:Class="__WPFMathGame__.GameWindow"
+﻿<Window x:Class="___MathGame2___.GameWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Math Game" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Window.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#FFB3E5FC" Offset="0.0"/>
-            <GradientStop Color="#FF64B5F6" Offset="1.0"/>
-        </LinearGradientBrush>
-    </Window.Background>
+        Title="Juego" Height="600" Width="700" WindowStartupLocation="CenterScreen"
+        Background="#FF1E1E2F">
 
-    <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="operationDisplay" FontSize="28" FontWeight="Bold" Foreground="DarkBlue" 
-                       TextAlignment="Center" Margin="0,0,0,10"/>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-            <TextBox x:Name="answerInput" Width="200" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+        <!-- Contador de preguntas -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0" Margin="0,10">
+            <TextBlock Text="Pregunta: " FontSize="20" Foreground="White"/>
+            <TextBlock x:Name="txtQuestionNumber" Text="0/10" FontSize="20" Foreground="White"/>
+            <TextBlock Text=" | Correctas: " FontSize="20" Foreground="White" Margin="20,0,0,0"/>
+            <TextBlock x:Name="txtCorrect" Text="0" FontSize="20" Foreground="White"/>
+            <TextBlock Text=" | Incorrectas: " FontSize="20" Foreground="White" Margin="20,0,0,0"/>
+            <TextBlock x:Name="txtIncorrect" Text="0" FontSize="20" Foreground="White"/>
+        </StackPanel>
 
-            <Button x:Name="submitButton" Content="Enviar Respuesta" Click="SubmitButton_Click"
-                    Width="160" Height="40" Background="#FF42A5F5" Foreground="White" FontSize="16"
-                    Cursor="Hand" BorderThickness="0" Margin="0,0,0,10">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Background="{TemplateBinding Background}" CornerRadius="10">
-                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="Background" Value="#FF42A5F5"/>
-                        <Setter Property="Foreground" Value="White"/>
-                        <Setter Property="FontSize" Value="16"/>
-                        <Setter Property="Width" Value="160"/>
-                        <Setter Property="Height" Value="40"/>
-                        <Setter Property="Cursor" Value="Hand"/>
-                        <Setter Property="BorderThickness" Value="0"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF1E88E5"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
+        <!-- Operación -->
+        <TextBlock x:Name="txtOperation" Text="0 + 0" FontSize="40" FontWeight="Bold" Foreground="White"
+                   HorizontalAlignment="Center" Grid.Row="1" Margin="0,30"/>
 
-            <TextBlock x:Name="feedbackDisplay" FontSize="18" FontWeight="Bold" Foreground="DarkGreen" 
-                       TextAlignment="Center" Margin="0,0,0,10"/>
-            <TextBlock x:Name="timerDisplay" FontSize="18" FontWeight="Bold" Foreground="DarkRed" 
-                       TextAlignment="Center" Margin="0,0,0,10"/>
-            <TextBlock x:Name="scoreLabel" FontSize="20" FontWeight="Bold" Foreground="Black" 
-                       TextAlignment="Center"/>
-            <TextBlock x:Name="scoreDisplay" FontSize="1" FontWeight="Bold" Foreground="Black" Height="161" Width="689" Visibility="Collapsed"/>
-            <TextBlock x:Name="remainingDisplay" FontSize="18" FontWeight="Bold" Foreground="Purple" TextAlignment="Center" Margin="0,0,0,10"/>
+        <!-- Respuesta del usuario -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Margin="0,20">
+            <TextBox x:Name="txtAnswer" Width="200" Height="50" FontSize="24" Margin="0,0,20,0"/>
+            <Button Content="Comprobar" Width="150" Height="50" FontSize="16" Background="#FF4CAF50" Foreground="White"
+                    Click="btnCheck_Click"/>
+        </StackPanel>
+
+        <!-- Estrellas -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="3" Margin="0,20">
+            <ItemsControl x:Name="icStars">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="★" FontSize="24" Foreground="Gold" Margin="2"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
     </Grid>
 </Window>

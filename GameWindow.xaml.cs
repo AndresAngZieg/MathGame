@@ -1,151 +1,156 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Threading;
+using static System.Formats.Asn1.AsnWriter;
 
-namespace __WPFMathGame__
+namespace ___MathGame2___
 {
     public partial class GameWindow : Window
     {
         private readonly List<string> selectedOperations;
         private readonly Random random = new();
-        private int score;
-        private int correctAnswers;
-        private int questionCount;
-        private readonly DateTime startTime;
-        private readonly DispatcherTimer timer;
-        private readonly ScoreManager scoreManager;
-        private const int TotalQuestions = 10;
+        private int questionNumber = 0;
+        private int correctAnswers = 0;
+        private int incorrectAnswers = 0;
+        private int totalQuestions = 10;
 
-        public GameWindow(List<string> operations)
+        private double currentStars = 0;
+        private DispatcherTimer timer;
+        private int elapsedSeconds = 0;
+
+        private double currentResult;
+
+        private ObservableCollection<GameResult> scores;
+
+        public GameWindow(bool sum, bool sub, bool mul, bool div, bool pow, bool root, ObservableCollection<GameResult> scoresCollection)
         {
             InitializeComponent();
-            selectedOperations = operations;
-            startTime = DateTime.Now;
-            scoreManager = new ScoreManager();
 
-            UpdateScoreDisplay();
+            scores = scoresCollection;
 
-            timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
-            timer.Tick += (s, e) => timerDisplay.Text = $"Tiempo: {(DateTime.Now - startTime):mm\\:ss}";
+            selectedOperations = new List<string>();
+            if (sum) selectedOperations.Add("+");
+            if (sub) selectedOperations.Add("-");
+            if (mul) selectedOperations.Add("*");
+            if (div) selectedOperations.Add("/");
+            if (pow) selectedOperations.Add("^");
+            if (root) selectedOperations.Add("√");
+
+            StartTimer();
+            NextQuestion();
+            ApplyBackground();
+        }
+
+        private void StartTimer()
+        {
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += (s, e) =>
+            {
+                elapsedSeconds++;
+                UpdateStars();
+            };
             timer.Start();
-
-            GenerateNewOperation();
         }
 
-        private void GenerateNewOperation()
+        private void NextQuestion()
         {
-            if (questionCount++ >= 10) { EndGame(); return; }
-
-            int remaining = TotalQuestions - questionCount + 1;
-            remainingDisplay.Text = $"Preguntas restantes: {remaining}";
-
-            int num1 = random.Next(1, 111);
-            int num2 = random.Next(1, 111);
-            string operation = selectedOperations[random.Next(selectedOperations.Count)];
-
-            Dictionary<string, string> symbols = new()
+            if (questionNumber >= totalQuestions)
             {
-                { "+", "+" }, { "-", "-" }, { "*", "×" }, { "/", "÷" },
-                { "Raíces", "√" }, { "Potencias", "^" }
-            };
+                timer.Stop();
+                MessageBox.Show($"Juego terminado!\nCorrectas: {correctAnswers}\nIncorrectas: {incorrectAnswers}\nEstrellas: {(int)currentStars}",
+                                "Resultados", MessageBoxButton.OK, MessageBoxImage.Information);
+                EndGame();
+                return;
+            }
 
-            num2 = operation switch
+            questionNumber++;
+            txtQuestionNumber.Text = $"{questionNumber}/{totalQuestions}";
+            txtCorrect.Text = correctAnswers.ToString();
+            txtIncorrect.Text = incorrectAnswers.ToString();
+            txtAnswer.Text = "";
+
+            string op = selectedOperations[random.Next(selectedOperations.Count)];
+            double a = random.Next(1, 21);
+            double b = random.Next(1, 21);
+
+            switch (op)
             {
-                "Raíces" => 0,
-                "Potencias" => random.Next(1, 6),
-                _ => num2
-            };
+                case "+": currentResult = a + b; txtOperation.Text = $"{a} + {b}"; break;
+                case "-": currentResult = a - b; txtOperation.Text = $"{a} - {b}"; break;
+                case "*": currentResult = a * b; txtOperation.Text = $"{a} × {b}"; break;
+                case "/": b = random.Next(1, 21); currentResult = Math.Round(a / b, 2); txtOperation.Text = $"{a} ÷ {b}"; break;
+                case "^": currentResult = Math.Pow(a, 2); txtOperation.Text = $"{a} ^ 2"; break;
+                case "√": currentResult = Math.Round(Math.Sqrt(a), 2); txtOperation.Text = $"√{a}"; break;
+            }
 
-            operationDisplay.Text = operation == "Raíces" ? $"√{num1} = ?" : $"{num1} {symbols[operation]} {num2} = ?";
-            feedbackDisplay.Text = "";
+            UpdateStars();
         }
 
-        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+        private void btnCheck_Click(object sender, RoutedEventArgs e)
         {
-            string operationText = operationDisplay.Text;
-
-            // Si la operación es una raíz cuadrada, el formato será diferente
-            string operation = ""; // Para almacenar la operación (√, +, -, etc)
-            int num1 = 0;
-            int num2 = 0;
-
-            // Detectar la operación en el texto
-            if (operationText.Contains("√"))
+            if (double.TryParse(txtAnswer.Text, out double userAnswer))
             {
-                operation = "√";
-                string numberPart = operationText.Split('=')[0].Replace("√", "").Trim();
-                num1 = int.Parse(numberPart);
-            }
-            else
-            {
-                // Para las operaciones convencionales (+, -, *, /, ^)
-                string[] parts = operationText.Split(' ');
-
-                operation = parts[1]; // Aquí obtenemos el operador: +, -, *, /, ^
-                num1 = int.Parse(parts[0]); // Primer número
-                num2 = int.Parse(parts[2]); // Segundo número
-            }
-
-            // Calcular la respuesta correcta según la operación
-            int correctAnswer = operation switch
-            {
-                "+" => num1 + num2,
-                "-" => num1 - num2,
-                "×" => num1 * num2,
-                "÷" => num1 / num2,
-                "√" => (int)Math.Floor(Math.Sqrt(num1)), // Raíz cuadrada, tomar el valor entero inferior
-                "^" => (int)Math.Floor(Math.Pow(num1, num2)), // Potencia, tomar el valor entero inferior
-                _ => 0
-            };
-
-            // Validación de la entrada para evitar el FormatException
-            if (int.TryParse(answerInput.Text, out int userAnswer))
-            {
-                if (userAnswer == correctAnswer)
-                {
+                if (Math.Abs(userAnswer - currentResult) < 0.01)
                     correctAnswers++;
-                    score++;
-                    feedbackDisplay.Text = "¡Correcto!";
-                }
                 else
-                {
-                    score--;
-                    feedbackDisplay.Text = $"Incorrecto. La respuesta era: {correctAnswer}";
-                }
+                    incorrectAnswers++;
+
+                NextQuestion();
             }
             else
             {
-                feedbackDisplay.Text = "Por favor ingresa un número válido.";
+                MessageBox.Show("Introduce un número válido", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-
-            UpdateScoreDisplay();
-            GenerateNewOperation();
-            answerInput.Clear();
         }
 
-
-
-
-
-        private void UpdateScoreDisplay()
+        private void UpdateStars()
         {
-            scoreDisplay.Text = $"Puntos: {score}\nTop Scores:\n" + string.Join("\n", scoreManager.GetTopScores());
+            double baseStars = correctAnswers * 2.5;
+            double timePenalty = elapsedSeconds / 10.0;
+            currentStars = Math.Max(0, Math.Min(25, baseStars - timePenalty));
+
+            icStars.Items.Clear();
+            for (int i = 0; i < (int)currentStars; i++)
+                icStars.Items.Add("★");
         }
 
         private void EndGame()
         {
-            timer.Stop();
-            double finalScore = correctAnswers / (DateTime.Now - startTime).TotalSeconds * 100000;
+            int stars = (int)currentStars;
+            int points = correctAnswers * 10; // ejemplo de puntuación
 
-            scoreManager.SaveScore(finalScore);
-            UpdateScoreDisplay();
+            var config = ConfigManager.LoadConfig();
+            config.TotalStars += stars;  // sumamos las que ganó el jugador
+            ConfigManager.SaveConfig(config);
 
-            MessageBox.Show($"Juego terminado.\nPuntaje final: {finalScore:F2}");
+            ResultManager.SaveResult(new GameResult
+            {
+                Player = "Jugador",
+                Score = points,
+                Stars = stars
+            });
 
-            new MainWindow().Show();
-            Close();
+            this.Close();
+        }
+
+        private void ApplyBackground()
+        {
+            var config = ConfigManager.LoadConfig();
+
+            try
+            {
+                this.Background = (Brush)new BrushConverter().ConvertFromString(config.CurrentBackground);
+            }
+            catch
+            {
+                // Color inválido o no definido, usar fondo por defecto
+                this.Background = (Brush)new BrushConverter().ConvertFromString("DarkBlue");
+            }
         }
     }
 }

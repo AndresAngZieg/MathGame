@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace __WPFMathGame__
+namespace ___MathGame2___
 {
     /// <summary>
     /// Interaction logic for App.xaml

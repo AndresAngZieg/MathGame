@@ -1,0 +1,182 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|d:\\proyectosprogramaci\u00F3n\\\u002B\u002B\u002Bmathgame2\u002B\u002B\u002B\\shopwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|solutionrelative:shopwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|d:\\proyectosprogramaci\u00F3n\\\u002B\u002B\u002Bmathgame2\u002B\u002B\u002B\\shopwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|solutionrelative:shopwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|d:\\proyectosprogramaci\u00F3n\\\u002B\u002B\u002Bmathgame2\u002B\u002B\u002B\\gamewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|solutionrelative:gamewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|d:\\proyectosprogramaci\u00F3n\\\u002B\u002B\u002Bmathgame2\u002B\u002B\u002B\\resultmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|solutionrelative:resultmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|d:\\proyectosprogramaci\u00F3n\\\u002B\u002B\u002Bmathgame2\u002B\u002B\u002B\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|d:\\proyectosprogramaci\u00F3n\\\u002B\u002B\u002Bmathgame2\u002B\u002B\u002B\\gameresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|solutionrelative:gameresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|d:\\proyectosprogramaci\u00F3n\\\u002B\u002B\u002Bmathgame2\u002B\u002B\u002B\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|d:\\proyectosprogramaci\u00F3n\\\u002B\u002B\u002Bmathgame2\u002B\u002B\u002B\\gameconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|solutionrelative:gameconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|d:\\proyectosprogramaci\u00F3n\\\u002B\u002B\u002Bmathgame2\u002B\u002B\u002B\\gamewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|solutionrelative:gamewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|d:\\proyectosprogramaci\u00F3n\\\u002B\u002B\u002Bmathgame2\u002B\u002B\u002B\\configmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D90B825-3EE6-41A4-BF51-1C793EC333C0}|\u002B\u002B\u002BMathGame2\u002B\u002B\u002B.csproj|solutionrelative:configmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShopWindow.xaml",
+              "DocumentMoniker": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\ShopWindow.xaml",
+              "RelativeDocumentMoniker": "ShopWindow.xaml",
+              "ToolTip": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\ShopWindow.xaml",
+              "RelativeToolTip": "ShopWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-02T05:21:17.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShopWindow.xaml.cs",
+              "DocumentMoniker": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\ShopWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ShopWindow.xaml.cs",
+              "ToolTip": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\ShopWindow.xaml.cs",
+              "RelativeToolTip": "ShopWindow.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T05:21:54.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameConfig.cs",
+              "DocumentMoniker": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\GameConfig.cs",
+              "RelativeDocumentMoniker": "GameConfig.cs",
+              "ToolTip": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\GameConfig.cs",
+              "RelativeToolTip": "GameConfig.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T05:07:07.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-30T15:08:20.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameResult.cs",
+              "DocumentMoniker": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\GameResult.cs",
+              "RelativeDocumentMoniker": "GameResult.cs",
+              "ToolTip": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\GameResult.cs",
+              "RelativeToolTip": "GameResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T17:00:50.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswEQAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T15:08:18.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResultManager.cs",
+              "DocumentMoniker": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\ResultManager.cs",
+              "RelativeDocumentMoniker": "ResultManager.cs",
+              "ToolTip": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\ResultManager.cs",
+              "RelativeToolTip": "ResultManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T17:02:44.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameWindow.xaml",
+              "DocumentMoniker": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\GameWindow.xaml",
+              "RelativeDocumentMoniker": "GameWindow.xaml",
+              "ToolTip": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\GameWindow.xaml",
+              "RelativeToolTip": "GameWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-30T15:46:01.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GameWindow.xaml.cs",
+              "DocumentMoniker": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\GameWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GameWindow.xaml.cs",
+              "ToolTip": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\GameWindow.xaml.cs",
+              "RelativeToolTip": "GameWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJcAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T15:46:14.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConfigManager.cs",
+              "DocumentMoniker": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\ConfigManager.cs",
+              "RelativeDocumentMoniker": "ConfigManager.cs",
+              "ToolTip": "D:\\ProyectosProgramaci\u00F3n\\\u002B\u002B\u002BMathGame2\u002B\u002B\u002B\\ConfigManager.cs",
+              "RelativeToolTip": "ConfigManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T05:08:20.234Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
