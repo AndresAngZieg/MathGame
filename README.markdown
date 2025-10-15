@@ -19,7 +19,7 @@ MathGame es una aplicación educativa diseñada para estudiantes de secundaria q
 
 2. Abre la solución `WPFMathGame.sln` en Visual Studio.
 3. Restaura los paquetes NuGet si es necesario.
-4. Compila y ejecuta el proyecto.
+4. Ejecuta el proyecto desde `bin/Debug/net8.0-windows/+++MathGame2+++.exe`
 
 ## Uso
 
