@@ -1,4 +1,3 @@
-````markdown
 # MathGame
 
 MathGame es una aplicación educativa diseñada para estudiantes de secundaria que quieran mejorar sus habilidades en matemáticas mediante ejercicios interactivos.
@@ -14,9 +13,9 @@ MathGame es una aplicación educativa diseñada para estudiantes de secundaria q
 ## Instalación
 
 1. Clona el repositorio:
-   ```bash
+```bash
    git clone https://github.com/AndresAngZieg/MathGame.git
-````
+```
 
 2. Abre la solución `WPFMathGame.sln` en Visual Studio.
 3. Restaura los paquetes NuGet si es necesario.
